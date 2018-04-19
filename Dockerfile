@@ -49,7 +49,7 @@
 # RUN pip install --requirement requirements.txt
 ## Train the model
 
-FROM gokul93/seldonio-deps-base:latest as build-alpine
+FROM gokul93/seldonio-deps-base:latest AS build-alpine
 
 COPY . /src
 WORKDIR /src
