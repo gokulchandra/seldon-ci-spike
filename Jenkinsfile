@@ -8,6 +8,7 @@ node {
   def imageVersion = "latest"
   def modelName = "IrisClassifier"
   checkout scm
+  sh("docker version")
   stage 'Build image'
   sh("docker build \
     --build-arg IMAGE_REPO=${imageRepo} \
