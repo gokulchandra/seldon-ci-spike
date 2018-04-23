@@ -8,12 +8,12 @@ node {
   def imageVersion = "latest"
   def modelName = "IrisClassifier"
   checkout scm
-  // stage 'Build image'
-  // sh("docker build \
-  //   --build-arg IMAGE_REPO=${imageRepo} \
-  //   --build-arg IMAGE_VERSION=${imageVersion} \
-  //   --build-arg MODEL_NAME=${modelName} \
-  //   --tag ${imageRepo}/${imageName}:${imageVersion} .")
+  stage 'Build image'
+  sh("docker build \
+    --build-arg IMAGE_REPO=${imageRepo} \
+    --build-arg IMAGE_VERSION=${imageVersion} \
+    --build-arg MODEL_NAME=${modelName} \
+    --tag ${imageRepo}/${imageName}:${imageVersion} .")
   // stage 'Run Go tests'
   // sh("docker run ${imageTag} go test")
   // stage 'Push image to registry'
