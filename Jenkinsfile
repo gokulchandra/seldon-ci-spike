@@ -13,7 +13,7 @@
         --build-arg IMAGE_REPO=${imageRepo} \
         --build-arg IMAGE_VERSION=${imageVersion} \
         --build-arg MODEL_NAME=${modelName} \
-        --tag ${imageRepo}/${imageName}:${imageVersion} .")
+        --tag gcr.io/${imageRepo}/${imageName}:${imageVersion} .")
     stage 'Push image to registry'
     sh("docker login -u _json_key --password-stdin https://gcr.io < SeldonIO-05d762cae78a.json")
     sh("docker push gcr.io/${imageRepo}/${imageName}:${imageVersion}")
