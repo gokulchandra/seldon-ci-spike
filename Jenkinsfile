@@ -1,4 +1,4 @@
-node('docker') {
+node {
   // def project = 'seldonio-201011'
   // def appName = 'gceme'
   // def feSvcName = "${appName}-frontend"
