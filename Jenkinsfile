@@ -1,20 +1,54 @@
-node {
+podTemplate(label: 'pod-builder', 
+    containers: [
+        containerTemplate(
+            name: 'docker',
+            image: 'docker',
+            ttyEnabled: true,
+            command: 'cat'
+        )
+    ]
+) {
+  node('pod-builder') {
+    def imageRepo = "gokul93"
+    def imageName = "sklearn-ci"
+    def imageVersion = "latest"
+    def modelName = "IrisClassifier"
+    checkout scm
+    sh("docker version")
+    stage 'Build image'
+      sh("docker build \
+        --build-arg IMAGE_REPO=${imageRepo} \
+        --build-arg IMAGE_VERSION=${imageVersion} \
+        --build-arg MODEL_NAME=${modelName} \
+        --tag ${imageRepo}/${imageName}:${imageVersion} .")
+  }
+}
+
+
+
+
+
+
+
+
+
+// node {
   // def project = 'seldonio-201011'
   // def appName = 'gceme'
   // def feSvcName = "${appName}-frontend"
   // def imageTag = "gcr.io/${project}/${appName}:${env.BRANCH_NAME}.${env.BUILD_NUMBER}"
-  def imageRepo = "gokul93"
-  def imageName = "sklearn-ci"
-  def imageVersion = "latest"
-  def modelName = "IrisClassifier"
-  checkout scm
-  sh("docker version")
-  stage 'Build image'
-  sh("docker build \
-    --build-arg IMAGE_REPO=${imageRepo} \
-    --build-arg IMAGE_VERSION=${imageVersion} \
-    --build-arg MODEL_NAME=${modelName} \
-    --tag ${imageRepo}/${imageName}:${imageVersion} .")
+  // def imageRepo = "gokul93"
+  // def imageName = "sklearn-ci"
+  // def imageVersion = "latest"
+  // def modelName = "IrisClassifier"
+  // checkout scm
+  // sh("docker version")
+  // stage 'Build image'
+  // sh("docker build \
+  //   --build-arg IMAGE_REPO=${imageRepo} \
+  //   --build-arg IMAGE_VERSION=${imageVersion} \
+  //   --build-arg MODEL_NAME=${modelName} \
+  //   --tag ${imageRepo}/${imageName}:${imageVersion} .")
   // stage 'Run Go tests'
   // sh("docker run ${imageTag} go test")
   // stage 'Push image to registry'
@@ -49,4 +83,4 @@ node {
   //       echo 'To access your environment run `kubectl proxy`'
   //       echo "Then access your service via http://localhost:8001/api/v1/proxy/namespaces/${env.BRANCH_NAME}/services/${feSvcName}:80/"
   // }
-}
+// }
