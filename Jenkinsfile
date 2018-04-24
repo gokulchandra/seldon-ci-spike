@@ -15,7 +15,7 @@
         --build-arg MODEL_NAME=${modelName} \
         --tag ${imageRepo}/${imageName}:${imageVersion} .")
     stage 'Push image to registry'
-    sh("docker -- push ${imageRepo}/${imageName}:${imageVersion}")
+    sh("docker push ${imageRepo}/${imageName}:${imageVersion}")
   }
 
 
