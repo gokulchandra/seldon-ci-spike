@@ -16,6 +16,7 @@ podTemplate(label: 'pod-builder',
     checkout scm
     sh("docker version")
     sh("uname -a")
+    sh("lsb_release -a")  
     stage 'Build image'
       sh("docker build \
         --build-arg IMAGE_REPO=${imageRepo} \
