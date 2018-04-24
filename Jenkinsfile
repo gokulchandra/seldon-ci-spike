@@ -15,6 +15,7 @@ podTemplate(label: 'pod-builder',
     def modelName = "IrisClassifier"
     checkout scm
     sh("docker version")
+    sh("uname -a")
     stage 'Build image'
       sh("docker build \
         --build-arg IMAGE_REPO=${imageRepo} \
