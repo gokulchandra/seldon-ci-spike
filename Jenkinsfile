@@ -17,6 +17,14 @@
     stage 'Push image to registry'
     sh("docker login -u _json_key --password-stdin https://gcr.io < SeldonIO-05d762cae78a.json")
     sh("docker push gcr.io/${imageRepo}/${imageName}:${imageVersion}")
+    stage "Deploy Application"
+    switch (env.BRANCH_NAME) {
+      // Roll out to canary environment
+      case "master":
+          // Change deployed image in canary to the one we just built
+          sh("kubectl --namespace=seldon apply -f sklearn_iris_deployment.json")
+          break
+        }
   }
 
 
