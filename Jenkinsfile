@@ -1,14 +1,5 @@
-podTemplate(label: 'pod-builder', 
-    containers: [
-        containerTemplate(
-            name: 'docker',
-            image: 'docker',
-            ttyEnabled: true,
-            command: 'cat'
-        )
-    ]
-) {
-  node('pod-builder') {
+
+  node {
     def imageRepo = "seldonio-201011"
     def imageName = "sklearn-ci"
     def imageVersion = "latest"
@@ -26,7 +17,7 @@ podTemplate(label: 'pod-builder',
     stage 'Push image to registry'
     sh("gcloud docker -- push gcr.io/${imageRepo}/${imageName}:${imageVersion}")
   }
-}
+
 
 
 
