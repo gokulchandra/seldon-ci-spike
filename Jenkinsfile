@@ -1,6 +1,6 @@
 
   node {
-    def imageRepo = "seldonio-201011"
+    def imageRepo = "gokul93"
     def imageName = "sklearn-ci"
     def imageVersion = "latest"
     def modelName = "IrisClassifier"
@@ -15,7 +15,7 @@
         --build-arg MODEL_NAME=${modelName} \
         --tag ${imageRepo}/${imageName}:${imageVersion} .")
     stage 'Push image to registry'
-    sh("gcloud docker -- push gcr.io/${imageRepo}/${imageName}:${imageVersion}")
+    sh("docker -- push ${imageRepo}/${imageName}:${imageVersion}")
   }
 
 
