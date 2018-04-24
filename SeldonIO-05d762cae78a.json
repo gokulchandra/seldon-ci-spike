@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "seldonio-201011",
+  "private_key_id": "05d762cae78aa335f133a10594f893b112bcd150",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCVkTQ/twy/A193\nrAKzmpjod8Zdp8YfYbOLUngp7JNi4+3mx5WCICPuvh6OjuF8QqZ7pPgA72hLO2Tk\nJT535YQV+9xH75PlaGUr5Vj79r/Hudy6tO7img3mzduOhGHy7Kr3XZoF6hb6HKqt\nTBJqQRY8Jt79HyJa87Y+seAIHO48EB1bnoeA/xG7x1XtMfSLgLp9YeNtbSJQU5tq\na+bkNAAHThcCXHwhC8Zyu3UPzCJIFyHXgEyzFaJsmpqfCHMBiSGV25gSrLa4t6gp\nY3/g2D5/737aMlJ4zzJOBNbo1B7iNAE8p6nOReP/wTw9Z+qJxQgl6sEy8IcFYLh7\nXEmyQT1jAgMBAAECggEAAtY1MnwrTrgmqGNnzbZB7i7PYVlcRZ4ZxKu0wb7N8NM3\n4OeqK0SmydFrTPLizfOJqtCvL31a8gpXWIhoTefZgH09aVPe7zvyp0l7TZQZgRVC\nXXwvB7c6SkVfQ625Gd1pRLXOxQvykZ3Xkt/dfYxseomWMyDTCvySWVAQWrcJwbPZ\nG8Se+ffTmEUruKyZFkZN5uZMjIehqP3jVSTAORs6cPkcp8zJPuVDZc5PNyBcVIp7\nRL7ikrPN6Uaz5NytM42fATGBnhH5TROo3AYJ3xvoJNUnU1hpe501Nyk9+ktNGAOi\nFmsYZjbTWsE/xZdpp+ppZTX4IJN2xtApAVXyUx4YuQKBgQDOc04TkuCHH3dCltuZ\nMxej94CvYmgfStd8a7P8rjX+t4CD7RiH4yBxvQGJ/GfLAzypCoHo57/zft1qunpq\nd5Upl0ehxJ/EPsHk5sm8sUvQbkCWU78/+qNPoVj9PzU/RCDOlpSUf6CDjof51t1Q\ncCBphQB2gZQjaDjYj0O9IOVZ7wKBgQC5duPDGdJtwdg2YZlXQKUwoxVsTbYXscFB\nLT8mlarkpIq3WVhVhHTY6uwqoCU5ocbyD3wpY3TcojvQNtGSr63UZxjXSwuijluE\nTb48368vGdwvefC9OQjokjcLzgRUH0OTb6pKYSKvaKe/cnLdyosEcoAn+vht2r+z\nINRyz3hXzQKBgAnfXbZ16aLMkGlwyWOUG+dNaKv6arxEWfWrONo2goKBx/WHGws0\ng1KtFSvCFDyTFQ2IYRoAKx+7y17VOBFrUojAoT5NJs69qYwGtVL+r39yJkiKDLVE\niRa/wn+pzCQQX/lBHi3TxJtF75609bRpCEPDhngkTi87RqykfTrIHe+lAoGBALPX\nY5jGq1SfCcgB8C25k/WLzrRMzuw/BATtmTUTILnCDHkqfAvA+4V0mDnlPPObukzz\nUxTXSnTAJHwNDD/PdyJmLqJmNQwWOwwaTwS8ayWjT+4Bsr3qVocfcZ1S0sO35VFM\nkLa7ZmTteOyeUGBdjVxso3UhWlE8M3PBvADwyeNpAoGAL5lO78m6F+121/Nnw0Cd\nE2Fee26a46U8ha6XTp7ooJP4qm0BM9ZxnxGhWAqsDU/VLmLyzf7LDRyHKt44851+\ngqd++0bOqDlm7rvvTzbBFAUruyU6DgWXoOBbF8B4Rz8YaQI6+cq12nMt7B9gZq4S\n76LAd33SbNykxNYqQWcj2S8=\n-----END PRIVATE KEY-----\n",
+  "client_email": "gcr-536@seldonio-201011.iam.gserviceaccount.com",
+  "client_id": "103604890144240098166",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/gcr-536%40seldonio-201011.iam.gserviceaccount.com"
+}
