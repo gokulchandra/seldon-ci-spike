@@ -15,7 +15,7 @@
         --build-arg MODEL_NAME=${modelName} \
         --tag gcr.io/${imageRepo}/${imageName}:${imageVersion} .")
     stage 'Push image to registry'
-    sh("docker login -u _json_key --password-stdin https://gcr.io < SeldonIO-05d762cae78a.json")
+    sh("gcloud auth print-access-token | docker login -u oauth2accesstoken --password-stdin https://gcr.io")
     sh("docker push gcr.io/${imageRepo}/${imageName}:${imageVersion}")
     stage "Deploy Application"
     switch (env.BRANCH_NAME) {
