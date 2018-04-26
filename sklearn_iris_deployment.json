@@ -21,7 +21,7 @@
                     "spec": {
                         "containers": [
                             {
-                                "image": "gokul93/sklearn-ci:latest",
+                                "image": "gcr.io/seldonio-201011/sklearn-ci:latest",
                                 "imagePullPolicy": "IfNotPresent",
                                 "name": "sklearn-iris-classifier",
                                 "resources": {
